@@ -607,17 +607,14 @@ a {
 }
 
 /* -----------OUR_PRODUCTS------------ */
+
 .product_card {
-  box-sizing: border-box;
   max-width: 350px;
   width: 100%;
-  background-image: url("/img/shop-item-desk1.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  padding-top: 175px;
   margin-left: 12px;
   margin-right: 12px;
   display: flex;
+  flex-direction: column;
   align-self: stretch;
 }
 
@@ -684,13 +681,23 @@ a {
 }
 
 .product_card_wrapper {
+  height: 100%;
   border: 3px solid rgba(181, 159, 91, 0.6);
   padding: 50px 20px 20px 20px;
+  margin-top: -35px;
+}
+
+.product_img {
+  max-width: 300px;
+  width: 100%;
+  margin-left: 25px;
 }
 
 .our_products {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+
   margin-bottom: 50px;
 }
 
