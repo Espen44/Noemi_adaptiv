@@ -13,15 +13,20 @@
     <div class="all_site_wrapper">
 
         <div class="modal modal_hidden">
+            
+
             <div class="modal_window">
-                <div class="close_block">
-                    <img src="/svg/form-x.svg" class="close_popup" alt="закрыть">
-                </div>  
+
+                <button type="submit" class="close_block">              
+                </button> 
+                
+
                 <h2 class="name_section popup_section">Ваш фидбек</h2>
                 <form class="your_feedback">
             
                     <div class="input_wrapper">
                         <label class="site_visit_group">
+                            <span class="search_hint">Поле частота посещения сайта</span>
                             <h3 class="title_feedback">Как часто вы заходите на сайт?</h3>
                             <select class="select">
                                 <option selected >Почти каждый день</option>
@@ -39,7 +44,7 @@
                                 <input type="radio" class="radio" name="radio_group">
                                 <span class="radio_group_text">Да</span>
                             </label>
-                            <label class="radio_group">
+                            <label class="radio_group" >
                                 <input type="radio" class="radio" name="radio_group">
                                 <span class="radio_group_text">Нет</span>
                             </label> 
@@ -48,6 +53,7 @@
                                 
                     <div class="input_wrapper">
                         <label class="content_group">
+                            <span class="search_hint">Поле для ввода текста</span>
                             <h3 class="title_feedback">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</h3>
                             <div class="textarea_block">
                             <textarea class="textarea" name="text" id="text" cols="30" rows="5" placeholder="Может, больше рецептов?"></textarea>
@@ -60,6 +66,7 @@
                 </form>  
             </div> 
             <div class="overlay "></div> 
+            
         </div>
 
         <header class="header">
@@ -75,7 +82,7 @@
                                 d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z">
                         </svg> -->
                         <ul class="menu_list">
-                            <li class="menu_list_item"><a class="menu__link" href="#0">Главная</a></li>
+                            <li class="menu_list_item first_menu_list_item"><a class="menu__link" href="#0">Главная</a></li>
                             <li class="menu_list_item"><a class="menu__link" href="#0">Посты</a></li>
                             <li class="menu_list_item"><a class="menu__link" href="#0">Статьи</a></li>
                             <li class="menu_list_item"><a class="menu__link" href="#0">Теги</a></li>
