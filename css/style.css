@@ -47,9 +47,11 @@ section {
   outline: none;
   font-size: 13px;
 }
+
 html {
   height: 100%;
 }
+
 body {
   line-height: 1;
 }
@@ -64,6 +66,7 @@ textarea,
 button {
   outline: none;
   border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 a {
@@ -118,10 +121,14 @@ a {
   padding-top: 5px;
 }
 
-.img__hamburger {
-  margin-top: 5px;
-  margin-right: 7px;
-  fill: #fff;
+.menu_box {
+  background-image: url("../img/Btn_Close.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
 }
 
 .menu__link {
@@ -196,26 +203,29 @@ a {
   background-size: cover;
   width: calc(25% - 4px);
   min-height: 320px;
-  padding: 75px 20px 15px 20px;
+  padding: 132px 20px 15px 20px;
   position: relative;
   z-index: 0;
   display: flex;
   align-items: flex-end;
 }
+
 .new_card_wrapper {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   width: 100%;
   display: flex;
   flex-direction: column;
   border: 4px solid rgba(181, 159, 91, 0.6);
-  padding: 35px 35px 30px 35px;
+  padding: 40px 35px 30px 35px;
 }
 
 .new_card_list {
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 15px;
+  flex-wrap: wrap;
+
+  margin-bottom: 8px;
 }
 
 .new_card::after {
@@ -290,6 +300,7 @@ a {
 
 .card_img {
   width: 380px;
+  /* min-width: 360px; */
 }
 
 .all_card_info {
@@ -795,6 +806,7 @@ a {
 .modal_hidden {
   display: none;
 }
+/* ---------СКРЫТИЕ МОДАДЬНОГО ОКНА------ */
 
 .modal .overlay {
   position: absolute;
@@ -923,9 +935,16 @@ a {
 }
 
 /* ----------@MEDIA----------- */
-/* ------header---- */
+
+@media (min-width: 1200px) {
+  .menu_box {
+    display: none;
+  }
+}
 
 @media (min-width: 641px) and (max-width: 1199px) {
+  /* ------header---- */
+
   .menu_list_item {
     display: none;
   }
@@ -950,21 +969,21 @@ a {
   .main__title {
     width: 82%;
     margin-top: 86px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   .wrapper {
-    padding: 37px 26px 0px 32px;
+    padding: 37px 35px 0px 35px;
   }
 
   .img__logo {
     min-width: 158px;
     padding-top: 5px;
   }
+
   /* -------now_trends------ */
 
   .name_section {
-    padding-top: 10px;
     font-size: 18px;
     margin-bottom: 20px;
   }
@@ -974,10 +993,11 @@ a {
   }
 
   .new_card {
+    background-position: center bottom;
     width: calc(50% - 2px);
     min-height: 240px;
     margin-bottom: 4px;
-    padding: 75px 20px 8px 20px;
+    padding: 75px 20px 14px 20px;
   }
   .new_card_wrapper {
     padding: 35px 35px 35px 25px;
@@ -995,21 +1015,25 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 55px;
+    margin-bottom: 47px;
   }
 
   /*-----article_block--------*/
+
   .main {
     margin-left: 30px;
     margin-right: 37px;
-    margin-bottom: -7px;
   }
 
   .main_card {
     box-sizing: border-box;
     width: 100%;
     flex-wrap: wrap;
-    margin-bottom: 46px;
+    margin-bottom: 43px;
+  }
+
+  .last_main_card {
+    margin-bottom: 30px;
   }
 
   .card_title {
@@ -1018,6 +1042,10 @@ a {
   }
   .card_img {
     width: 100%;
+  }
+
+  .card_content_text {
+    letter-spacing: -0.1px;
   }
 
   .all_card_info {
@@ -1034,24 +1062,36 @@ a {
     margin-bottom: 28px;
   }
 
+  .card_line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #eeeeee;
+  }
+
   .aside {
     margin-right: 35px;
   }
-
+  .name_section_aside {
+    margin-bottom: 27px;
+  }
   .container_main {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 14px;
   }
 
   /* ------our-products------- */
+
   .name_title {
     font-size: 17px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
+
   .product_card {
     width: calc(100% / 2 - 26px);
     margin-top: 5px;
-    margin-bottom: 27px;
+    margin-bottom: 29px;
   }
 
   .product_card_wrapper {
@@ -1059,6 +1099,7 @@ a {
     padding: 48px 20px 15px 20px;
     margin-top: -35px;
   }
+
   .name_title {
     margin-bottom: 5px;
   }
@@ -1077,6 +1118,7 @@ a {
   }
 
   /* --------popup--------- */
+
   .popup_section {
     font-size: 18px;
   }
@@ -1088,8 +1130,115 @@ a {
   }
 }
 
-@media (min-width: 1200px) {
-  .img__hamburger {
+@media (min-width: 360px) and (max-width: 640px) {
+  /* ------header----- */
+
+  .menu_list_item {
     display: none;
+  }
+
+  .img__logo {
+    min-width: 180px;
+    width: 100%;
+  }
+
+  .menu_box {
+    box-sizing: border-box;
+    margin-left: 15px;
+    margin-bottom: 165px;
+  }
+
+  .header {
+    background-image: url("../img/banner-mobile.jpg");
+    z-index: 0;
+    width: 100%;
+  }
+
+  .header::after {
+    z-index: -1;
+  }
+
+  .title {
+    font-size: 26px;
+    margin-bottom: 210px;
+    margin-right: 43px;
+    margin-left: 43px;
+    letter-spacing: -0.5px;
+    line-height: 1.35;
+  }
+
+  .main__title {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  .wrapper {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    padding: 30px 43px 0px 43px;
+    margin-bottom: 35px;
+  }
+
+  .img__logo {
+    width: 100%;
+  }
+  /* -----now_trends------ */
+
+  .new_card {
+    /* width: calc(50% - 2px); */
+    background-position: center bottom;
+    width: 100%;
+    height: 100%;
+    min-height: 230px;
+    margin-bottom: 4px;
+    padding: 75px 20px 18px 20px;
+  }
+
+  .new_card_wrapper {
+    padding: 30px 10px 30px 25px;
+  }
+
+  .new_card_title {
+    font-size: 16px;
+  }
+
+  .new_card_list {
+    margin-bottom: 10px;
+  }
+
+  .trends_block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+  }
+
+  /*-----article_block--------*/
+
+  .name_section {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .container_main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ------our-products------- */
+
+  .product_card {
+    width: 100%;
+    /* margin-top: 5px; */
+    /* margin-bottom: 27px; */
+  }
+
+  .our_products {
+    align-self: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* margin-left: 18px; */
+    /* margin-right: 18px; */
+    /* margin-bottom: 12px; */
   }
 }
