@@ -1096,10 +1096,6 @@ top: -35px;
 
 @media screen and (min-width: 1025px) and (orientation: landscape){
 
-  .menu_list {
-  display: none;
-}
-
   .trend_card {
     box-sizing: border-box;
     width: calc(100%/4 - 4px);
